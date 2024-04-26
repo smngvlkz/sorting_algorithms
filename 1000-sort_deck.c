@@ -7,11 +7,13 @@
  * @card1: The first card
  * @card2: The second card
  *
- * Return: Negative number if card1 < card2, 0 if equal, positive number if card1 > card2
+ * Return: Negative number if card1 < card2, 0 if equal,
+ * positive number if card1 > card2
  */
 int card_cmp(const void *card1, const void *card2)
 {
-	char *values[] = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+	char *values[] = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+		"Jack", "Queen", "King"};
 	deck_node_t **_card1 = (deck_node_t **)card1;
 	deck_node_t **_card2 = (deck_node_t **)card2;
 	int i, value1, value2;
