@@ -36,44 +36,41 @@ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 <main-file.c> <sort-function-file
 ```
 ## Algorithms
 
-Bubble Sort 
-Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.
+* Bubble Sort 
+A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.
 
-Insertion Sort 
-Insertion Sort is a simple sorting algorithm that builds the final sorted array one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
+* Insertion Sort 
+A sorting algorithm that builds the final sorted array one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
 
-Selection Sort 
-Selection Sort is a simple sorting algorithm that improves on the bubble sort by making only one exchange for every pass through the list.
+* Selection Sort 
+A sorting algorithm that improves on the bubble sort by making only one exchange for every pass through the list.
 
-Quick Sort
-Quick Sort is a divide and conquer algorithm. It creates two empty arrays to hold elements less than the pivot value and elements greater than the pivot value, and then recursively sort the sub arrays.
+* Quick Sort
+A divide and conquer algorithm. It creates two empty arrays to hold elements less than the pivot value and elements greater than the pivot value, and then recursively sort the sub arrays.
 
-Shell Sort
-Shell Sort is mainly a variation of Insertion Sort. In insertion sort, we move elements only one position ahead. When an element has to be moved far ahead, many movements are involved. The idea of shell sort is to allow exchange of far items.
+* Shell Sort
+Mainly a variation of Insertion Sort. In insertion sort, we move elements only one position ahead. When an element has to be moved far ahead, many movements are involved. The idea of shell sort is to allow exchange of far items.
 
-Cocktail Shaker Sort
-Cocktail Shaker Sort is a variation of Bubble sort. Like bubble sort, Cocktail Sort is also a comparison based algorithm. It differs from bubble sort in the fact that bubble sort only sorts in one direction (up the list), while cocktail sort sorts in both directions (up and down the list) on each pass through the list.
+* Cocktail Shaker Sort
+A variation of Bubble sort. Like bubble sort, Cocktail Sort is also a comparison based algorithm. It differs from bubble sort in the fact that bubble sort only sorts in one direction (up the list), while cocktail sort sorts in both directions (up and down the list) on each pass through the list.
 
-Counting Sort 
-Counting Sort is a sorting algorithm that sorts the elements of an array by counting the number of occurrences of each unique element in the array. The count is stored in an auxiliary array and the sorting is done by mapping the count as an index of the auxiliary array.
+* Counting Sort 
+A sorting algorithm that sorts the elements of an array by counting the number of occurrences of each unique element in the array. The count is stored in an auxiliary array and the sorting is done by mapping the count as an index of the auxiliary array.
 
-Merge Sort
-Merge Sort is a divide and conquer algorithm that was invented by John von Neumann in 1945. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves.
+* Merge Sort
+A divide and conquer algorithm that was invented by John von Neumann in 1945. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves.
 
-Heap Sort
-Heap Sort is a comparison based sorting technique based on Binary Heap data structure. It is similar to selection sort where we first find the maximum element and place the maximum element at the end. We repeat the same process for the remaining elements.
+* Heap Sort
+A comparison based sorting technique based on Binary Heap data structure. It is similar to selection sort where we first find the maximum element and place the maximum element at the end. We repeat the same process for the remaining elements.
 
-Radix Sort
-Radix Sort is a non-comparative integer sorting algorithm that sorts data with integer keys by grouping keys by the individual digits which share the same significant position and value.
+* Radix Sort
+A non-comparative integer sorting algorithm that sorts data with integer keys by grouping keys by the individual digits which share the same significant position and value.
 
-Bitonic Sort
-Bitonic Sort is a classic parallel algorithm for sorting. Bitonic sort does O(n Log 2n) comparisons. The number of comparisons done by Bitonic sort are more than popular sorting algorithms like Merge Sort [ does O(nLogn) comparisons], but Bitonice sort is better for parallel implementation because we always compare elements in predefined sequence and the sequence of comparison doesn’t depend on data. Therefore it is suitable for implementation in hardware and parallel processor array.
+* Bitonic Sort
+A classic parallel algorithm for sorting. Bitonic sort does O(n Log 2n) comparisons. The number of comparisons done by Bitonic sort are more than popular sorting algorithms like Merge Sort [ does O(nLogn) comparisons], but Bitonice sort is better for parallel implementation because we always compare elements in predefined sequence and the sequence of comparison doesn’t depend on data. Therefore it is suitable for implementation in hardware and parallel processor array.
 
-Quick Sort Hoare
-Quick Sort Hoare is a variant of Quick Sort that uses the Hoare partition scheme. The pivot is always the last element of the partition being sorted.
+* Quick Sort Hoare
+A variant of Quick Sort that uses the Hoare partition scheme. The pivot is always the last element of the partition being sorted.
 
-Card Sorting
+* Card Sorting
 The sort_deck function sorts a deck of cards. The deck must contain exactly 52 cards, each represented by a node in a doubly linked list. Each node contains a card, which has a value and a kind (the suit). The function sorts the deck in ascending order, first by kind, in the order Spades, Hearts, Clubs, and Diamonds, and then by value, from Ace to King.
-
-
-##
