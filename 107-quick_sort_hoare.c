@@ -1,9 +1,9 @@
 #include "sort.h"
 
 /**
- * swap - Swaps two integers in an array
- * @a: The first integer to be swapped
- * @b: The second integer to be swapped
+ * swap - Swaps two integers in an array.
+ * @a: The first integer to be swapped.
+ * @b: The second integer to be swapped.
  */
 void swap(int *a, int *b)
 {
@@ -26,23 +26,26 @@ int hoare_partition(int *array, size_t size, int low, int high)
 {
 	int pivot = array[high];
 	int i = low - 1;
-	int j = high + 1;
+	int j;
 
-	while (1)
+	for (j = low; j <= high; j++)
 	{
-		do {
+		if (array[j] < pivot)
+		{
 			i++;
-		} while (array[i] < pivot);
-		do {
-			j--;
-		} while (array[j] > pivot);
-
-		if (i >= j)
-			return (j);
-
-		swap(&array[i], &array[j]);
+			if (i != j)
+			{
+				swap(&array[i], &array[j]);
+				print_array(array, size);
+			}
+		}
+	}
+	if (i + 1 != high)
+	{
+		swap(&array[i + 1], &array[high]);
 		print_array(array, size);
 	}
+	return (i + 1);
 }
 
 /**
@@ -60,8 +63,10 @@ void quick_sort_hoare_recursion(int *array, size_t size, int low, int high)
 	if (low < high)
 	{
 		pi = hoare_partition(array, size, low, high);
-		quick_sort_hoare_recursion(array, size, low, pi);
-		quick_sort_hoare_recursion(array, size, pi + 1, high);
+		if (pi > low)
+			quick_sort_hoare_recursion(array, size, low, pi - 1);
+		if (pi < high)
+			quick_sort_hoare_recursion(array, size, pi + 1, high);
 	}
 }
 
