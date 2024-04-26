@@ -1,6 +1,6 @@
 ## 0X1B. C - Sorting Algorithms & Big O
 
-Implementations of various sorting algorithms in C. The goal of this project from ALX is to understand the workings of different sorting algorithms and their time and space complexities.
+Implementations of various sorting algorithms in C. The goal of this project is to understand the workings of different sorting algorithms and their time and space complexities.
 
 ## About
 
