@@ -40,6 +40,14 @@ void swap_int(int *a, int *b);
 void swap_nodes(listint_t **list, listint_t *node1, listint_t *node2);
 void merge(int *array, int *temp, size_t start, size_t mid, size_t end);
 void merge_sort_rec(int *array, int *temp, size_t start, size_t end);
-
+void heapify(int *array, size_t size, int i, size_t total_size);
+int get_max(int *array, size_t size);
+void counting_sort_radix(int *array, size_t size, int exp);
+void bitonic_compare(int up, int *array, size_t i, size_t j);
+void bitonic_merge(int up, int *array, size_t size);
+void bitonic_sort_seq(int up, int *array, size_t size);
+void swap(int *a, int *b);
+int hoare_partition(int *array, size_t size, int low, int high);
+void quick_sort_hoare_recursion(int *array, size_t size, int low, int high);
 
 #endif /* SORT_H */
