@@ -24,27 +24,21 @@ void swap(int *a, int *b)
  */
 int hoare_partition(int *array, size_t size, int low, int high)
 {
-	int pivot = array[high];
+	int pivot = array[low];
 	int i = low - 1;
 	int j;
 
-	for (j = low; j <= high; j++)
+	for (j = low; j < high; j++)
 	{
 		if (array[j] < pivot)
 		{
 			i++;
-			if (i != j)
-			{
-				swap(&array[i], &array[j]);
-				print_array(array, size);
-			}
+			swap(&array[i], &array[j]);
+			print_array(array, size);
 		}
 	}
-	if (i + 1 != high)
-	{
-		swap(&array[i + 1], &array[high]);
-		print_array(array, size);
-	}
+	swap(&array[i + 1], &array[high]);
+	print_array(array, size);
 	return (i + 1);
 }
 
@@ -64,7 +58,7 @@ void quick_sort_hoare_recursion(int *array, size_t size, int low, int high)
 	{
 		pi = hoare_partition(array, size, low, high);
 		if (pi > low)
-			quick_sort_hoare_recursion(array, size, low, pi - 1);
+			quick_sort_hoare_recursion(array, size, low, pi);
 		if (pi < high)
 			quick_sort_hoare_recursion(array, size, pi + 1, high);
 	}
